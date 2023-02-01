@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../assets/banner-video.mp4";
+import video from "../assets/banner-video.webm";
 
 function BannerVideo() {
   return (
