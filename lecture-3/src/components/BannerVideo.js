@@ -9,7 +9,7 @@ function BannerVideo() {
 
   font.load().then(function () {
     console.log("BMTEONSUNG has load");
-	setIsFontLoaded(true);
+    setIsFontLoaded(true);
   });
 
   return (
@@ -25,7 +25,10 @@ function BannerVideo() {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-      <div className="w-full h-full flex justify-center items-center" style={}>
+      <div
+        className="w-full h-full flex justify-center items-center"
+        style={{ opacity: isFontLoaded ? 1 : 0 }}
+      >
         <div className="text-white text-center">
           <div className="text-6xl leading-none font-semibold">KEEP</div>
           <div className="text-6xl leading-none font-semibold">CALM</div>
