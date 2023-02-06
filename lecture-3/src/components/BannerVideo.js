@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import video from "../assets/banner-video.mp4";
 import video_webm from "../assets/banner-video.webm";
 import FontFaceObserver from "fontfaceobserver";
 
 function BannerVideo() {
   const [isFontLoaded, setIsFontLoaded] = useState(false);
-  var font = new FontFaceObserver("BMYEONSUNG");
 
-  font.load().then(function () {
-    console.log("BMTEONSUNG has load");
-    setIsFontLoaded(true);
-  });
+  // const font = new FontFaceObserver("BMYEONSUNG");
+
+  // useEffect(() => {
+  //   font.load().then(function () {
+  //     console.log("BMTEONSUNG has load");
+  //     setIsFontLoaded(true);
+  //   });
+  // }, []);
 
   return (
     <div className="BannerVideo w-full h-screen overflow-hidden relative bg-texture">
