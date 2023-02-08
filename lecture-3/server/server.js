@@ -5,7 +5,17 @@ const path = require("path");
 
 const header = {
   setHeaders: (res, path) => {
-    res.setHeader("Cache-Control", "max-age=20");
+    if (path.endWith(".html")) {
+      res.setHeader("Cache-Control", "no-cache");
+    } else if (
+      path.endWith(".js") ||
+      path.endWith(".css") ||
+      path.endWith(".webp")
+    ) {
+      res.setHeader("Cache-Control", "public, max-age=31536000");
+    } else {
+      res.setHeader("Cache-Control", "no-store");
+    }
   },
 };
 
