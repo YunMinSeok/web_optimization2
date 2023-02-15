@@ -17,7 +17,10 @@ function PhotoItem({ photo: { urls, alt } }) {
   );
 }
 
-const ImageWrap = styled.div``;
+const ImageWrap = styled.div`
+  width: 100%;
+  padding-bottom: 56.25%;
+`;
 
 const Image = styled.img`
   cursor: pointer;
