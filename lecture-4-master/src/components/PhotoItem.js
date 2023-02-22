@@ -15,6 +15,7 @@ function PhotoItem({ photo: { urls, alt } }) {
     <ImageWrap>
       <LazyLoad offset={1000}>
         <Image
+          crossOrigin="*"
           id={id}
           src={urls.small + '&t=' + new Date().getTime()}
           alt={alt}
