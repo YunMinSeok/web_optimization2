@@ -8,13 +8,18 @@ function PhotoItem({ photo: { urls, alt } }) {
   const dispatch = useDispatch();
 
   const openModal = () => {
-    dispatch(showModal({ src: urls.full, alt }));
+    dispatch(showModal({ src: urls.full, alt, id }));
   };
 
   return (
     <ImageWrap>
       <LazyLoad offset={1000}>
-        <Image src={urls.small + '&t=' + new Date().getTime()} alt={alt} onClick={openModal} />
+        <Image
+          id={id}
+          src={urls.small + '&t=' + new Date().getTime()}
+          alt={alt}
+          onClick={openModal}
+        />
       </LazyLoad>
     </ImageWrap>
   );
